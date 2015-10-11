@@ -1,0 +1,18 @@
+{
+  "name": "example",
+  "description": "retext-textlint example",
+  "version": "0.1.0",
+  "author": "Kenichiro Murata",
+  "dependencies": {
+    "eslint": "^1.6.0",
+    "retext": "^1.0.0",
+    "retext-japanese": "^0.2.0",
+    "retext-textlint": "file:..",
+    "textlint-plugin-jtf-style": "^0.6.0"
+  },
+  "license": "MIT",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
