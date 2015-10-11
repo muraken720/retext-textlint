@@ -20,7 +20,7 @@ Install textlint plugins.
 npm install textlint-plugin-jtf-style
 ```
 
-*   exapmle/example.js
+*   example/example.js
 
 ```javascript
 var retext = require('retext')
@@ -64,7 +64,7 @@ retext().use(japanese).use(textlint, options).process(text, (err, file, doc) => 
 */
 ```
 
-*   exapmle/.textlintrc
+*   example/.textlintrc
 
 ```javascript
 {
