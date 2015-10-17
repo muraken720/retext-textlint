@@ -7,7 +7,7 @@
     "eslint": "^1.6.0",
     "retext": "^1.0.0",
     "retext-japanese": "^0.2.0",
-    "retext-textlint": "^0.1.0",
+    "retext-textlint": "^0.1.1",
     "textlint-plugin-jtf-style": "^0.7.0"
   },
   "license": "MIT",
