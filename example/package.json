@@ -1,14 +1,14 @@
 {
   "name": "example",
   "description": "retext-textlint example",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Kenichiro Murata",
   "dependencies": {
     "eslint": "^1.6.0",
     "retext": "^1.0.0",
     "retext-japanese": "^0.2.0",
-    "retext-textlint": "^0.1.1",
-    "textlint-plugin-jtf-style": "^0.8.0"
+    "retext-textlint": "file:..",
+    "textlint-plugin-jtf-style": "^0.8.5"
   },
   "license": "MIT",
   "main": "example.js",

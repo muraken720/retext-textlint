@@ -28,9 +28,9 @@ var japanese = require('retext-japanese')
 var textlint = require('retext-textlint')
 var compact = require('eslint/lib/formatters/compact')
 
-var text = 'タイトル「ＡＢＣ」\n' +
+var text = 'タイトル「文章の推敲に必要なこと」\n' +
     '\n' +
-    '1 これは前段です。これは中段（２文の場合は後段という。）です。これは後段です。'
+    '1 これは前段です。これは中段（２文の場合は後段という。）です。これは後段です。聡は常用漢字表外の漢字です。'
 
 var options = {
   plugins: [
@@ -39,28 +39,17 @@ var options = {
 }
 
 retext().use(japanese).use(textlint, options).process(text, (err, file, doc) => {
-  if (err) {
-    console.log(err)
-  }
-  console.log('\n=== doc ===')
-  console.log(doc)
-
   console.log('\n=== file ===')
   console.log(compact([file]))
 })
 
 /**
-* === doc ===
-* タイトル「ＡＢＣ」
-* 
-* 1 これは前段です。これは中段（２文の場合は後段という。）です。これは後段です。
-* 
-* 
 * === file ===
-* : line 1, col 5, Warning - "jtf-style/2.1.9.アルファベット" アルファベットは「半角」で表記します。
-* : line 3, col 16, Warning - "jtf-style/2.1.8.算用数字" 算用数字は「半角」で表記します。
+* : line 1, col 10, Warning - "jtf-style/2.1.2.漢字" 「敲」は「常用漢字表」外の漢字です。
+* : line 3, col 41, Warning - "jtf-style/2.1.2.漢字" 「聡」は「常用漢字表」外の漢字です。
+* : line 3, col 17, Error - "jtf-style/2.1.8.算用数字" 算用数字は「半角」で表記します。
 * 
-* 2 problems
+* 3 problems
 */
 ```
 
@@ -72,6 +61,9 @@ retext().use(japanese).use(textlint, options).process(text, (err, file, doc) => 
     "jtf-style"
   ],
   "rules": {
+    "jtf-style/2.1.2.漢字": {
+      "severity" : "warning"
+    },
     "jtf-style/4.1.1.句点(。)": false,
     "jtf-style/3.1.1.全角文字と半角文字の間": false
   }

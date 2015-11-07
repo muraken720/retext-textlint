@@ -1,7 +1,7 @@
 {
   "name": "retext-textlint",
   "description": "retext plugin to use textlint",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Kenichiro Murata <kenichiro.murata@gmail.com>",
   "bugs": {
     "url": "https://github.com/muraken720/retext-textlint/issues"
@@ -9,7 +9,7 @@
   "dependencies": {
     "nlcst-to-string": "^1.0.0",
     "retext": "^1.0.0",
-    "textlint": "^4.0.0",
+    "textlint": "^4.7.6",
     "vfile": "^1.1.0"
   },
   "devDependencies": {

@@ -3,6 +3,9 @@
     "jtf-style"
   ],
   "rules": {
+    "jtf-style/2.1.2.漢字": {
+      "severity" : "warning"
+    },
     "jtf-style/4.1.1.句点(。)": false,
     "jtf-style/3.1.1.全角文字と半角文字の間": false
   }

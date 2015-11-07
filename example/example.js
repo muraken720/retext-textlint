@@ -7,7 +7,7 @@ var compact = require('eslint/lib/formatters/compact')
 
 var text = 'タイトル「文章の推敲に必要なこと」\n' +
     '\n' +
-    '1 これは前段です。これは中段（２文の場合は後段という。）です。これは後段です。聡明は常用漢字表外の漢字です。'
+    '1 これは前段です。これは中段（２文の場合は後段という。）です。これは後段です。聡は常用漢字表外の漢字です。'
 
 var options = {
   plugins: [
@@ -16,12 +16,6 @@ var options = {
 }
 
 retext().use(japanese).use(textlint, options).process(text, (err, file, doc) => {
-  if (err) {
-    console.log(err)
-  }
-  console.log('\n=== doc ===')
-  console.log(doc)
-
   console.log('\n=== file ===')
   console.log(compact([file]))
 })

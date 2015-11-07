@@ -30,7 +30,13 @@ function attacher (retext, options) {
 
       for (var index = 0; index < messages.length; index++) {
         var msg = messages[index]
-        file.warn('"' + msg.ruleId + '" ' + msg.message, {line: msg.line, column: msg.column})
+        var msgText = '"' + msg.ruleId + '" ' + msg.message
+
+        if (msg.severity === 1) {
+          file.warn(msgText, {line: msg.line, column: msg.column})
+        } else if (msg.severity === 2) {
+          file.fail(msgText, {line: msg.line, column: msg.column})
+        }
       }
     }
 
